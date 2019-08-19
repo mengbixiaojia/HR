@@ -19,6 +19,6 @@ namespace EFEntity
             base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.AddFromAssembly(Assembly.GetExecutingAssembly());
         }
-        
+        public DbSet<config_file_first_kind> first_kind { get; set; }
     }
 }
