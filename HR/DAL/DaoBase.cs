@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Runtime.Remoting.Messaging;
 using EFEntity;
 using System.Data.Entity.Infrastructure;
+using Model;
 
 namespace DAL
 {
@@ -91,6 +92,11 @@ namespace DAL
                    .ToList();
             return list;
 
+        }
+        public object login(usersModel u)
+        {
+            var values = db.Database.SqlQuery<T>($"select * from users where u_name='{u.u_name}' and u_password='{u.u_password}'").ToList();
+            return values.Count();
         }
     }
 }

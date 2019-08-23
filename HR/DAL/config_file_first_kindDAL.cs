@@ -6,11 +6,25 @@ using System.Threading.Tasks;
 using EFEntity;
 using IDAL;
 using Model;
+using System.Runtime.Remoting.Messaging;
 
 namespace DAL
 {
     public class config_file_first_kindDAL : DaoBase<config_file_first_kind>, Iconfig_file_first_kindDAL
     {
+        static MyDBContext db = CreateDbContext();
+        private static MyDBContext CreateDbContext()
+        {
+            //从当前请求的线程取值
+            db = CallContext.GetData("s") as MyDBContext;
+            if (db == null)
+            {
+                db = new MyDBContext();
+                //把上下文对象存入当前请求的线程中
+                CallContext.SetData("s", db);
+            }
+            return db;
+        }
         public int FirstKindAdd(config_file_first_kindModel fk)
         {
             config_file_first_kind est = new config_file_first_kind()
@@ -78,6 +92,13 @@ namespace DAL
                 first_kind_salary_id = fk.first_kind_salary_id
             };
             return Update(est);
+        }
+        //查询最大编号
+        public object Maxfirst_kind_id()
+        {
+            var result = Convert.ToInt32(db.
+                first_kind.Select(e => e.first_kind_id).Max());
+            return result + 1;
         }
     }
 }

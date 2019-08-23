@@ -37,5 +37,9 @@ namespace BLL
         {
             return icb.FirstKindSelect();
         }
+        public object Maxfirst_kind_id()
+        {
+            return icb.Maxfirst_kind_id();
+        }
     }
 }

@@ -42,7 +42,7 @@
                         I级机构编号
                     </td>
                     <td width="81%" class="TD_STYLE2">
-                        @Html.TextBox("first_kind_id",Model.first_kind_id, new { @class="INPUT_STYLE1"})
+                        @Html.TextBox("first_kind_id",Model.first_kind_id, new { @class="INPUT_STYLE1",@readonly="readonly"})
                     </td>
                 </tr>
                 <tr>
@@ -50,7 +50,7 @@
                         I级机构名称
                     </td>
                     <td class="TD_STYLE2">
-                       @Html.TextBox("first_kind_name", Model.first_kind_name, new { @class = "INPUT_STYLE1" })
+                       @Html.TextBox("first_kind_name", Model.first_kind_name, new { @class = "INPUT_STYLE1", @readonly = "readonly" })
                     </td>
                 </tr>
                 <tr>

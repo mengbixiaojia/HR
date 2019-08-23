@@ -10,6 +10,9 @@
     <title>first_kind_register</title>
     <link href="~/css/table.css" rel="stylesheet" />
     <script src="~/Scripts/comm/comm.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
 </head>
 <body>
     <div> 
@@ -43,7 +46,7 @@
                     <td width="19%" class="TD_STYLE1">
                         I级机构编号
                     </td>
-                    <td width="81%" class="TD_STYLE2">@Html.TextBox("first_kind_id", Model.first_kind_id, new { @class = "INPUT_STYLE1" })</td>
+                    <td width="81%" class="TD_STYLE2" >@Html.TextBox("first_kind_id", Model.first_kind_id, new { @class = "INPUT_STYLE1",@readonly= "readonly" })@Html.ValidationMessageFor(e => e.first_kind_id)</td>
                 </tr>
                 <tr>
                     <td class="TD_STYLE1">
@@ -51,6 +54,7 @@
                     </td>
                     <td class="TD_STYLE2">
                    @Html.TextBox("first_kind_name",Model.first_kind_name, new { @class= "INPUT_STYLE1" })
+                        @Html.ValidationMessageFor(e => e.first_kind_name)
                     </td>
                 </tr>
                 <tr>
@@ -59,6 +63,7 @@
                     </td>
                     <td class="TD_STYLE2">
                        @Html.TextArea("first_kind_salary_id", Model.first_kind_salary_id, new { @class = "TEXTAREA_STYLE1",rows="4" })
+                        @Html.ValidationMessageFor(e => e.first_kind_salary_id)
                     </td>
                 </tr>
                 <tr>
@@ -67,6 +72,7 @@
                     </td>
                     <td class="TD_STYLE2">
                         @Html.TextArea("first_kind_sale_id", Model.first_kind_sale_id, new { @class= "TEXTAREA_STYLE1",rows="4" })
+                        @Html.ValidationMessageFor(e => e.first_kind_sale_id)
                     </td>
                 </tr>
             </table>

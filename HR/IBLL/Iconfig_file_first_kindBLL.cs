@@ -14,5 +14,6 @@ namespace IBLL
         int FirstKindUpdate(config_file_first_kindModel fk);
         List<config_file_first_kindModel> FirstKindSelect();
         config_file_first_kindModel FirstKindBy(int id);
+        object Maxfirst_kind_id();
     }
 }

@@ -16,7 +16,6 @@ namespace UI.Controllers
         // GET: config_file_first_kind
         public ActionResult first_kind()
         {
-            
             return View();
         }
         public ActionResult Index2()
@@ -29,6 +28,7 @@ namespace UI.Controllers
         public ActionResult first_kind_register()
         {
             config_file_first_kindModel c = new config_file_first_kindModel();
+            c.first_kind_id = icb.Maxfirst_kind_id().ToString();
             ViewData.Model = c;
             return View();
         }

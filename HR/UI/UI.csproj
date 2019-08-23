@@ -171,6 +171,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\config_file_first_kindController.cs" />
+    <Compile Include="Controllers\config_majorController.cs" />
+    <Compile Include="Controllers\config_major_kindController.cs" />
+    <Compile Include="Controllers\config_public_charController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\major_changeController.cs" />
+    <Compile Include="Controllers\user_listController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -250,10 +256,20 @@
     <Content Include="Views\config_file_first_kind\first_kind.cshtml" />
     <Content Include="Views\config_file_first_kind\first_kind_register.cshtml" />
     <Content Include="Views\config_file_first_kind\first_kind_change.cshtml" />
+    <Content Include="Views\config_major_kind\profession_design.cshtml" />
+    <Content Include="Views\Login\login.cshtml" />
+    <Content Include="Views\config_major_kind\major_kind_add.cshtml" />
+    <Content Include="Views\config_major\major.cshtml" />
+    <Content Include="Views\config_major\major_add.cshtml" />
+    <Content Include="Views\config_public_char\profession_designS.cshtml" />
+    <Content Include="Views\user_list\user_list.cshtml" />
+    <Content Include="Views\user_list\user_add.cshtml" />
+    <Content Include="Views\user_list\user_edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="css\" />
+    <Folder Include="images\" />
     <Folder Include="Scripts\calendar\" />
     <Folder Include="Scripts\comm\" />
     <Folder Include="Scripts\easyui\" />
@@ -263,6 +279,7 @@
     <Folder Include="Scripts\table\" />
     <Folder Include="Scripts\tree\" />
     <Folder Include="Scripts\winopen\" />
+    <Folder Include="Views\major_change\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

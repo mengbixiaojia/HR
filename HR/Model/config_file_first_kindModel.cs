@@ -15,9 +15,10 @@ namespace Model
         public string first_kind_id { get; set; }
         [Required(ErrorMessage = "名称不能为空")]
         public string first_kind_name { get; set; }
-
+        [RegularExpression(@"^[1-9]\d*$", ErrorMessage = "请输入数字")]
         public string first_kind_salary_id { get; set; }
 
+        [RegularExpression(@"^[1-9]\d*$", ErrorMessage = "请输入数字")]
         public string first_kind_sale_id { get; set; }
     }
 }

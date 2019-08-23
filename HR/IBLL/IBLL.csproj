@@ -42,6 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Iconfig_file_first_kindBLL.cs" />
+    <Compile Include="Iconfig_majorBLL.cs" />
+    <Compile Include="Iconfig_major_kindBLL.cs" />
+    <Compile Include="Iconfig_public_charBLL.cs" />
+    <Compile Include="Imajor_changeBLL.cs" />
+    <Compile Include="IRoleBLL.cs" />
+    <Compile Include="IusersBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

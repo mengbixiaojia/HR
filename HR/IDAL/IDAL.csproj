@@ -42,6 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Iconfig_file_first_kindDAL.cs" />
+    <Compile Include="Iconfig_majorDAL.cs" />
+    <Compile Include="Iconfig_major_kindDAL.cs" />
+    <Compile Include="Iconfig_public_charDAL.cs" />
+    <Compile Include="Imajor_changeDAL.cs" />
+    <Compile Include="IRoleDAL.cs" />
+    <Compile Include="IusersDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
